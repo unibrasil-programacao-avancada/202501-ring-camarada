@@ -2,17 +2,42 @@
 
 ## Sobre o problema
 
-Box é um esporte realmente violento. Para compensar, existe um código de conduta para manter a honra e o companheirismo em alto nível no ringue. Uma das regras mais conhecidas deste código de conduta é evitar bater no oponente abaixo da cintura ou acima do pescoço.
+O boxe é um esporte que pode ser considerado violento, mas há um código de conduta para garantir honra e companheirismo no ringue. Uma das regras mais conhecidas é a proibição de golpes abaixo da cintura e acima do pescoço.
 
-Dadas as alturas da cintura e pescoço de um adversário, e as alturas de um conjunto de socos, calcular quantos desses golpes são justos de acordo com a regra acima.
+Dadas as alturas da cintura e do pescoço de um adversário, bem como a altura de um conjunto de socos, é necessário calcular quantos desses golpes são considerados justos segundo a regra mencionada.
 
 ### Entrada
 
-A primeira linha contém três inteiros **W, N e P**, representando respectivamente a altura da cintura do adversário, a altura do pescoço e o número de socos lançados **(1 <= W <= N <= 200 e 1 <= P <= 100)**. A segunda linha contém **P** inteiros **H1, H2, ..., Hp** **(1 <= Hi <= 200 para i = 1, 2, ..., P)** indicando as alturas dos socos. Todas as alturas são dadas em centímetros.
+A primeira linha contém três inteiros W, N e P, representando respectivamente:
+
+W: altura da cintura do adversário,
+
+N: altura do pescoço do adversário,
+
+P: número de socos lançados.
+
+As restrições são:
+
+1 <= W <= N <= 200
+
+1 <= P <= 100
+
+A segunda linha contém P inteiros H1, H2, ..., Hp indicando as alturas dos socos, com 1 <= Hi <= 200 para todo i = 1, 2, ..., P. Todas as alturas são fornecidas em centímetros.
 
 ### Saída
 
-Retorne um inteiro representando o número de golpes que são justos, de acordo com o Código de conduta.
+O programa deve retornar um único número inteiro, que representa a quantidade de golpes considerados justos, ou seja, aqueles cuja altura está dentro do intervalo [W, N].
+
+### Exemplo
+
+Entrada: 
+
+50 100 5
+45 60 75 110 95
+
+Saída:
+
+3
 
 ## Modelagem do Problema
 
@@ -21,26 +46,29 @@ Retorne um inteiro representando o número de golpes que são justos, de acordo 
 - `W`: Altura da cintura do adversário.
 - `N`: Altura do pescoço do adversário.
 - `P`: Número de socos lançados.
-- `golpes_justos_atingidos`: utilizada para contar os golpes justos.
-- `altura_do_soco`: armazena a altura dos socos.
+- `golpes_justos_atingidos`: Contador de golpes que estão dentro do intervalo permitido.
+- `altura_do_soco`: Valor individual de cada golpe lançado.
 
 ### Funções/Procedimentos
 
-- `solve_warmup(FILE* ptr_in_file, char* file_name, const char* warmup_instance)`: Função principal que resolve o problema.
-- `check_warmup_solution(FILE* ptr_in_file, char* file_name, const char* warmup_instance)`: Função que verifica a solução gerada.
+- `solve_warmup(FILE* ptr_in_file, char* file_name, const char* warmup_instance)`: Função principal responsável por processar os dados de entrada, contar os golpes justos e armazenar o resultado em um arquivo de saída.
+
+- `check_warmup_solution(FILE* ptr_in_file, char* file_name, const char* warmup_instance)`: Função que compara a solução gerada com a solução esperada, verificando se os resultados estão corretos.
 
 ### Estruturas
 
-- Arquivos de entrada e saída organizados em diretórios específicos.
+
 - Funções de leitura e escrita de arquivos.
+- Entrada: Lida a partir de arquivos de teste contendo os valores W, N, P e as alturas dos golpes.
+- Saída: Escreve o número de golpes justos em um arquivo de solução específico.
 
 ## Solução
 
 ### Algoritmo
 
 1. Ler os valores de `W` (cintura), `N` (pescoço) e `P` (número de socos) do arquivo de entrada.
-2. Ler as alturas dos socos do arquivo de entrada.
-3. Contar do total de socos quais socos estão dentro do intervalo [W, N] (socos justos) através de um loop for.
+2. Inicializar o contador de golpes justos.
+3. Percorrer a lista de alturas dos socos e verificar quantos deles estão no intervalo permitido [W, N] através do       loop for.
 4. Escrever o resultado no arquivo de saída.
 
 ### Código
@@ -116,7 +144,7 @@ warmup.exe
 ### Desempenho
 #### Testes
 
-O programa foi testado utilizando as instâncias de entrada localizadas em ``` ring-camarada/input/```. O desempenho foi avaliado com base no número de instâncias de testes com sucesso e com falha.
+O programa foi testado utilizando as instâncias de entrada localizadas em ``` 08-ring-camarada/input/```. O desempenho foi avaliado com base no número de instâncias de testes com sucesso e com falha.
 
 Instâncias de testes com sucesso: **51** \
 Instâncias de testes com falha: **0**
