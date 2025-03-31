@@ -4,7 +4,7 @@
 
 #include "include/warmup_solver.h"
 
-const char WARMUP_INSTANCE[] = "ring-camarada/";
+const char WARMUP_INSTANCE[] = "08-ring-camarada/";
 const char INPUT_DIR[] = "input/";
 const char FILE_PREFIX[] = "instance_";
 
@@ -47,7 +47,7 @@ int main() {
             solve_warmup(fptr, str_dir->d_name, WARMUP_INSTANCE);
             success = check_warmup_solution(str_dir->d_name, WARMUP_INSTANCE);
 
-            printf("Teste %s %s.\n", str_dir->d_name, success ? "SUCCESSO" : "FALHA");
+            printf("Test %s %s.\n", str_dir->d_name, success ? "SUCCESS" : "FAILURE");
 
             if (success) {
                 total_success++;
@@ -58,7 +58,7 @@ int main() {
             fclose(fptr);
         }
 
-        printf("Total de sucessos: %d\nTotal de falhas: %d\n", total_success, total_failures);
+        printf("Total Success: %d\nTotal Failures: %d\n", total_success, total_failures);
 
         closedir(dir);
     }

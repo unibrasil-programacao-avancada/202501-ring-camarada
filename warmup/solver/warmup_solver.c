@@ -20,31 +20,31 @@ void solve_warmup(FILE* ptr_in_file, char* file_name, const char* warmup_instanc
         exit(1);
     }
 
-    // DeclaraÃ§Ã£o de variÃ¡veis para armazenar as informaÃ§Ãµes do problema
-    int W, N, P; // W (cintura), N (pescoÃ§o), P (nÃºmero de socos)
+    // Declaração de variáveis para armazenar as informações do problema
+    int W, N, P; // W (cintura), N (pescoço), P (número de socos)
     int golpes_justos_atingidos = 0;  // Contador de golpes justos
 
-    // LÃª a primeira linha do arquivo de entrada, que contÃ©m W, N e P
+    // Lê a primeira linha do arquivo de entrada, que contém W, N e P
     fscanf(ptr_in_file, "%d %d %d", &W, &N, &P);
 
-    // LÃª as alturas dos socos e conta quantos sÃ£o "golpes justos"
-    // Um golpe Ã© considerado justo se sua altura estiver entre W (mÃ­nimo) e N (mÃ¡ximo)
+    // Lê as alturas dos socos e conta quantos são "golpes justos"
+    // Um golpe é considerado justo se sua altura estiver entre W (mínimo) e N (máximo)
     for (int i = 0; i < P; i++) {
         int altura_do_soco;
 
-        // LÃª a altura do soco a partir do arquivo de entrada
+        // Lê a altura do soco a partir do arquivo de entrada
         fscanf(ptr_in_file, "%d", &altura_do_soco);
 
-        // Verifica se a altura do soco estÃ¡ dentro do intervalo de altura considerado justo
+        // Verifica se a altura do soco está dentro do intervalo de altura considerado justo
         if (altura_do_soco >= W && altura_do_soco <= N) {
             golpes_justos_atingidos++;  // Se for justo, incrementa o contador
         }
     }
 
-    // Escreve o nÃºmero de golpes justos atingidos no arquivo de soluÃ§Ã£o
+    // Escreve o número de golpes justos atingidos no arquivo de solução
     fprintf(fwsolptr, "%d\n", golpes_justos_atingidos);
 
-    // Fecha o arquivo de soluÃ§Ã£o apÃ³s gravar o resultado
+    // Fecha o arquivo de solução após gravar o resultado
     fclose(fwsolptr);
 }
 
