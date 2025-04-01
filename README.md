@@ -103,8 +103,7 @@ void solve_warmup(FILE* ptr_in_file, char* file_name, const char* warmup_instanc
     for (int i = 0; i < P; i++) {
         int altura_do_soco;
 
-        
-        // Lê a altura do soco a partir do arquivo de entrada
+         // Lê a altura do soco a partir do arquivo de entrada
         fscanf(ptr_in_file, "%d", &altura_do_soco);
 
         // Verifica se a altura do soco está dentro do intervalo de altura considerado justo
