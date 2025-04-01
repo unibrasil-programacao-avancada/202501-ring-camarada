@@ -18,9 +18,9 @@ P: número de socos lançados.
 
 As restrições são:
 
-1 <= W <= N <= 200: A altura da cintura (W) é menor ou igual à altura do pescoço (N), e ambas as alturas estão no intervalo de 1 a 200 centímetros.
+- `1 <= W <= N <= 200`: A altura da cintura (W) é menor ou igual à altura do pescoço (N), e ambas as alturas estão no intervalo de 1 a 200 centímetros.
 
-1 <= P <= 100: O número de socos lançados (P) está no intervalo de 1 a 100.
+- `1 <= P <= 100` O número de socos lançados (P) está no intervalo de 1 a 100.
 
 A segunda linha contém P inteiros H1, H2, ..., Hp, representando as alturas dos socos, onde cada altura Hi está no intervalo de 1 a 200 centímetros para todo i, de 1 até P. Todas as alturas são fornecidas em centímetros.
 
@@ -32,12 +32,16 @@ O programa deve retornar um único número inteiro, que representa a quantidade 
 
 Entrada: 
 
+```bash
 50 100 5
 45 60 75 110 95
+```
 
 Saída:
 
+```bash
 3
+```
 
 ## Modelagem do Problema
 
