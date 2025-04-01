@@ -144,9 +144,11 @@ warmup.exe
 ### Desempenho
 #### Testes
 
-O programa foi testado utilizando as instâncias de entrada localizadas em ``` 08-ring-camarada/input/```. O desempenho foi avaliado com base no número de instâncias de testes com sucesso e com falha.
+O programa foi testado utilizando as instâncias de entrada localizadas em ``` 08-ring-camarada/input/```. O desempenho foi avaliado com base no número de instâncias de testes com sucesso e com falha.<br>
 
 ![resultado da execução](img/execution_log.png)
+
+#### Resultado
 
 Instâncias de testes com sucesso: **51** \
 Instâncias de testes com falha: **0**
